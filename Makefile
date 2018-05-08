@@ -1,6 +1,6 @@
 CC = mpicxx 
 
-CFLAGS += -g -Wall
+CFLAGS += -g -Wall -std=c++11  -mavx2 
 INC += -I. `pkg-config --cflags opencv`
 LIBS += `pkg-config --libs opencv`
 

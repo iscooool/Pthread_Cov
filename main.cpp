@@ -1,6 +1,7 @@
 #include<iostream>
-#include "mpi.h"
+#include <mpi/mpi.h>
 #include<fcntl.h>
+#include<pthread.h>
 #include<sys/mman.h>
 #include<unistd.h>
 #include<sys/stat.h>
@@ -166,6 +167,7 @@ int main() {
 
 
     get_RGB(ptr, R, G, B, comm_sz, my_rank, my_row_num, my_col_num);//获取RGB
+    
 
     int ans_row_num = my_row_num - 2 * board_width;
     int ans_col_num = my_col_num - 2 * board_width;
